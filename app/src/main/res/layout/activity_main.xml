@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_screen_main_layout_padding"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:id="@+id/myfirstImage"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_width="match_parent"
+       android:layout_height="220dp"
+       android:contentDescription="@string/image"
+       android:src="@drawable/poster"
+        app:layout_constraintBottom_toTopOf="@+id/flstart"
+       />
+    <FrameLayout
+        android:id="@+id/flstart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myfirstImage"
+        android:background="@drawable/item_color_acent_border_ripple_bg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:layout_gravity="center"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold"
+
+            android:textColor="@color/colorAcent"
+            />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flBmi"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/item_circular_color_accent_background"
+        app:layout_constraintEnd_toEndOf="@id/flHistory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flstart">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BMI"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_button_text_size"
+
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="CALCULATOR"
+        android:textColor="@color/colorAcent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvHistory"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flBmi" />
+
+    <FrameLayout
+        android:layout_marginTop="100dp"
+        android:id="@+id/flHistory"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintStart_toStartOf="@id/flBmi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flstart"
+        android:background="@drawable/item_circular_color_accent_background"
+        >
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_calander2"
+            />
+    </FrameLayout>
+
+    <TextView
+
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="76dp"
+        android:paddingLeft="10dp"
+        android:text="HISTORY"
+        android:textColor="@color/colorAcent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvCalculator"
+        app:layout_constraintTop_toBottomOf="@+id/flHistory" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
